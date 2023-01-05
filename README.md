@@ -1,1 +1,1 @@
-# A minimalist social media app designed to remove fluff/noise and highlight core features. 
+# A minimalist social media app designed without fluff/noise that highlights core features. 
