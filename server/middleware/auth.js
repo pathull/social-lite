@@ -10,7 +10,7 @@ export const tokenVerification = async (req, res, next) => {
       token = token.slice(7, token.length).trimLeft();
     }
 
-    const verifiedToken = jwt.verify(token, process.env.JWT_SECRET)
+   const verifiedToken = jwt.verify(token, process.env.JWT_SECRET)
     req.user = verifiedToken;
     next();
   } catch (error) {
