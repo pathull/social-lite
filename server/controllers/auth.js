@@ -24,7 +24,7 @@ export const register = async (req, res) => {
       firstName,
       lastName,
       email,
-      password,
+      password: passwordHash,
       picturePath,
       friends,
       location,
@@ -37,7 +37,7 @@ export const register = async (req, res) => {
     const savedUser = await newUser.save();
     res.status(201).json(savedUser)
   } catch(error) {
-    
+    res.status(500).json({ error: err.message });
   }
 }
 
