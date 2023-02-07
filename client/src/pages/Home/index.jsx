@@ -3,7 +3,7 @@ import { Box } from "@mui/system";
 import { useSelector } from "react-redux"
 import NavBar from "pages/Navbar";
 import UserWidget from "pages/widgets/UserWidget";
-
+import PostMedia from "pages/widgets/PostMedia";
 
 
 const HomePage = () => {
@@ -27,6 +27,7 @@ const {_id, picturePath} = useSelector((state) => state.user);
       flexBasis={isNotMobile ? "42%" : undefined}
       mt={isNotMobile ? undefined : "2rem"}>
 
+        <PostMedia picturePath={picturePath}/>
       </Box>
       {isNotMobile && <Box flexBasis="26%"></Box>}
      </Box>
