@@ -4,6 +4,7 @@ import { useSelector } from "react-redux"
 import NavBar from "pages/Navbar";
 import UserWidget from "pages/widgets/UserWidget";
 import PostMedia from "pages/widgets/PostMedia";
+import Posts from "pages/widgets/Posts"
 
 
 const HomePage = () => {
@@ -28,11 +29,13 @@ const {_id, picturePath} = useSelector((state) => state.user);
       mt={isNotMobile ? undefined : "2rem"}>
 
         <PostMedia picturePath={picturePath}/>
+        <Posts userId={_id} />
       </Box>
-      {isNotMobile && <Box flexBasis="26%"></Box>}
+      {isNotMobile && <Box flexBasis="26%">
+        
+        
+        </Box>}
      </Box>
-
-    
     </Box>
 
   )

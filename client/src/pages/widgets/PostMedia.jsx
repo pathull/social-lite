@@ -93,7 +93,7 @@ const PostMedia = ({picturePath}) => {
                 border={`2px dashed ${palette.primary.main}`}
                 p="1rem"
                 width="100%"
-                sx={{"&hover": {cursor: "pointer"}}}
+                sx={{"&:hover": {cursor: "pointer"}}}
                 >
                   <input {...getInputProps()} />
                   {!image ? (

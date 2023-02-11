@@ -3,7 +3,7 @@ import User from "../models/User.js";
 
 export const createPost = async(req, res) => {
   try {
-    const { userId, description, picture } = req.body;
+    const { userId, description, picturePath } = req.body;
     const user = await User.findById(userId);
     const newPost = new Post({
       userId,
@@ -14,8 +14,8 @@ export const createPost = async(req, res) => {
       userPicturePath: user.picturePath,
       picturePath,
       likes: {},
-      comments: []
-    })
+      comments: [],
+    });
     await newPost.save();
 
     const post = await Post.find();
@@ -51,7 +51,7 @@ export const likePost = async (req, res) => {
     const { id } = req.params;
     const { userId } = req.body;
     //Get post info
-    const post = await Post.findById(Id);
+    const post = await Post.findById(id);
     //Check if user liked
     const isLiked = post.likes.get(userId);
 

@@ -4,7 +4,7 @@ const postSchema = mongoose.Schema (
   {
     userId: {
       type: String,
-      required:true
+      required:true,
     }, 
     firstName: {
       type:String,
@@ -12,23 +12,20 @@ const postSchema = mongoose.Schema (
     },
     lastName: {
       type:String,
-      required:true
+      required:true,
     },
-    location: {
-      type: String,
-    },
+    location: String,
     description: String,
     picturePath: String,
     userPicturePath: String,
     likes: {
-      //Map much more efficient than Array
       type: Map,
       of: Boolean,
     },
     comments: {
       type: Array,
-      default: []
-    }
+      default: [],
+    },
   },
   { timestamps: true }
 );

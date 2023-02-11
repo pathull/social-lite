@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import {
-  ManageAccountsOutlined,
   EditOutlined,
   LocationOnOutlined,
   WorkOutlineOutlined,
@@ -73,10 +72,9 @@ const getUser = async () => {
       }}>
         {firstName} {lastName}
       </Typography>
-      <Typography color={medium}>{friends.length}</Typography>
+      <Typography color={medium}>Friends: {friends.length}</Typography>
       </Box>
       </FlexBetween>
-      <ManageAccountsOutlined/>
       </FlexBetween>
 
       <Divider/>
