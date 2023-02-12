@@ -1,1 +1,1 @@
-# A minimalist social media app designed to highlight core features. 
+# A social media app designed to highlight the important features for a great UX. 
