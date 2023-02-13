@@ -12,11 +12,8 @@ import {
 } from "@mui/material";
 import {
   Search,
-  Message,
   DarkMode,
   LightMode,
-  Notifications,
-  Help,
   Menu,
   Close,
 } from "@mui/icons-material";
@@ -83,6 +80,7 @@ const handleLogout = () => {
       {/* DESKTOP NAV */}
       {isNonMobileScreens ? (
         <React.Fragment>
+        <FlexBetween gap="2rem">
         <IconButton onClick={() => dispatch(setMode())}>
         {theme.palette.mode === "dark" ? (
           <DarkMode sx={{ fontSize: "25px" }} />
@@ -90,7 +88,6 @@ const handleLogout = () => {
           <LightMode sx={{ color: dark, fontSize: "25px" }} />
         )}
           </IconButton>
-        <FlexBetween gap="2rem">
           <FormControl variant="standard" value={fullName}>
             <Select
               value={fullName}

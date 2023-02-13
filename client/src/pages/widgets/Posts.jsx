@@ -55,7 +55,7 @@ return (
     name = {`${firstName} ${lastName}`}
     description = {description}
     location = {location}
-    pitcturePath = {picturePath}
+    picturePath = {picturePath}
     userPicturePath = {userPicturePath}
     likes={likes}
     comments = {comments} 

@@ -26,6 +26,7 @@ export const colorTokens = {
     700: "#006B7D",
     800: "#00353F",
     900: "#001519",
+    1000: "#EF0107"
   },
 };
 
@@ -39,6 +40,7 @@ export const themeSettings = (mode) => {
           dark: colorTokens.primary[200],
           main: colorTokens.primary[500],
           light: colorTokens.primary[800],
+          contrastText: colorTokens.primary[1000],
         },
         neutral: {
           dark: colorTokens.grey[100],
@@ -56,6 +58,7 @@ export const themeSettings = (mode) => {
           dark: colorTokens.primary[700],
           main: colorTokens.primary[500],
           light: colorTokens.primary[50],
+          contrastText: colorTokens.primary[1000],
         },
         neutral: {
           dark: colorTokens.grey[700],
@@ -71,30 +74,30 @@ export const themeSettings = (mode) => {
       }
     },
     typography: {
-      fontFamily: ["Rubik", "sans-serif"].join(","),
+      fontFamily: ["Roboto", "sans-serif"].join(","),
       fontSize: 12,
       h1: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
+        fontFamily: ["Roboto", "sans-serif"].join(","),
         fontSize: 40,
       },
       h2: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
+        fontFamily: ["Roboto", "sans-serif"].join(","),
         fontSize: 32,
       },
       h3: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
+        fontFamily: ["Roboto", "sans-serif"].join(","),
         fontSize: 24,
       },
       h4: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
+        fontFamily: ["Roboto", "sans-serif"].join(","),
         fontSize: 20,
       },
       h5: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
+        fontFamily: ["Roboto", "sans-serif"].join(","),
         fontSize: 16,
       },
       h6: {
-        fontFamily: ["Rubik", "sans-serif"].join(","),
+        fontFamily: ["Roboto", "sans-serif"].join(","),
         fontSize: 14,
       }
     }

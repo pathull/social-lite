@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import {
-  EditOutlined,
   LocationOnOutlined,
   WorkOutlineOutlined,
 } from "@mui/icons-material";
@@ -33,6 +32,7 @@ const getUser = async () => {
 
   useEffect(() => {
     getUser();
+    // eslint-disable-next-line
   }, [])
   
   if(!user) {
@@ -44,7 +44,6 @@ const getUser = async () => {
     lastName,
     location,
     occupation,
-    viewedProfile,
     impressions,
     friends,
   } = user;
@@ -91,13 +90,7 @@ const getUser = async () => {
   <Divider/>
       <Box p="1rem 0">
         <FlexBetween mb="0.5rem">
-          <Typography color={medium}>Who's viewed your profile</Typography>
-          <Typography color={main} fontWeight="500">
-            {viewedProfile}
-          </Typography>
-        </FlexBetween>
-        <FlexBetween mb="0.5rem">
-          <Typography color={medium}>Impressions on your post</Typography>
+          <Typography color={medium}>Impressions on your posts count</Typography>
           <Typography color={main} fontWeight="500">
             {impressions}
           </Typography>
@@ -114,9 +107,8 @@ const getUser = async () => {
           <img src="../assets/twitter.png" alt="twitter" />
           <Box>
             <Typography color={main} fontWeight="500">
-              Twitter
+              <a href="https://www.twitter.com" style={{  textDecoration: 'none', color: "grey"  }} >Twitter</a>
             </Typography>
-            <Typography color={medium}>Socials</Typography>
           </Box>
         </FlexBetween>
       </FlexBetween>
@@ -126,17 +118,14 @@ const getUser = async () => {
           <img src="../assets/linkedin.png" alt="twitter" />
           <Box>
             <Typography color={main} fontWeight="500">
-            LinkedIn
+            <a href="https://www.linkedin.com" style={{ textDecoration: 'none', color: "grey" }} >Linkedin</a>
             </Typography>
-            <Typography color={medium}>Socials</Typography>
           </Box>
         </FlexBetween>
-        <EditOutlined sx={{color:main}} />
       </FlexBetween>
       </Box>
     </Wrapper>
   )
-
 }
 
 export default UserWidget;

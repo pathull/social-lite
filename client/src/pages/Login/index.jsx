@@ -29,7 +29,7 @@ const LoginPage = () => {
     backgroundColor={theme.palette.background.alt}
     >
       <Typography fontWeight="500" variant="h5" sx={{mb: "1.5rem"}}>
-        A simple social media app for close friends and family. 
+        A simple social media app purely for connecting to people. 
       </Typography>
       <Form></Form>
     </Box>

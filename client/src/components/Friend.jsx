@@ -26,17 +26,16 @@ const Friend = ({friendId, name,subtitle,userPicturePath}) => {
   const patchFriend = async () => {
     const response = await fetch(
       `http://localhost:3001/users/${_id}/${friendId}`,
-
       {
         method: "PATCH",
-        header: {
+        headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
         },
       }
-
     );
     const data = await response.json();
+    console.log(data)
     dispatch(setFriends({friends: data}));
   }
 

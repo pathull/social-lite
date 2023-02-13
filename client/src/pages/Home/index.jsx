@@ -5,7 +5,7 @@ import NavBar from "pages/Navbar";
 import UserWidget from "pages/widgets/UserWidget";
 import PostMedia from "pages/widgets/PostMedia";
 import Posts from "pages/widgets/Posts"
-
+import FriendListWidget from "pages/widgets/FriendListWidget";
 
 const HomePage = () => {
 const isNotMobile = useMediaQuery("(min-width:1000px)");
@@ -32,8 +32,12 @@ const {_id, picturePath} = useSelector((state) => state.user);
         <Posts userId={_id} />
       </Box>
       {isNotMobile && <Box flexBasis="26%">
-        
-        
+      {isNotMobile && (
+          <Box flexBasis="26%">
+            <Box m="2rem 0" />
+            <FriendListWidget userId={_id} />
+          </Box>
+        )}
         </Box>}
      </Box>
     </Box>
