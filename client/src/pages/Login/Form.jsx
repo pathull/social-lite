@@ -88,7 +88,7 @@ const Form = () => {
     const loggedIn = await loginResponse.json();
     onSubmitProps.resetForm();
 
-    if(loggedIn) {
+    if(loggedIn.user) {
       dispatch(
         //setting with redux store
         setLogin({
@@ -97,12 +97,14 @@ const Form = () => {
         })
       )
       navigate("/home");
+    } else {
+      alert("User does not exist");
     }
   }
 
   const handleFormSubmit = async(values, onSubmitProps) => {
     if(isLogin) {
-      await login(values, onSubmitProps)
+        await login(values, onSubmitProps)
     } else if(isRegister) {
       await register(values, onSubmitProps)
     }
