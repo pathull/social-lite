@@ -32,7 +32,7 @@ npm install
 MONGO_URL = 'mongodb://localhost:27017'
 PORT=3001
 JWT_SECRET='anythingyouwantittobe'
-
+```
 
 2. Run development server
 ```shell
