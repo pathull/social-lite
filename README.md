@@ -32,6 +32,18 @@ npm install
 MONGO_URL = 'mongodb://localhost:27017'
 PORT=3001
 JWT_SECRET='anythingyouwantittobe'
+
+
+//Server has mock data available upon starting app. Uncomment the following code in server -> index.js and run it only once to populate your db with mock data.
+
+//lines 17-19
+//import User from "./models/User.js";
+//import Post from "./models/Post.js";
+//import { users, posts } from "./data/index.js";
+
+//lines 66-67
+// User.insertMany(users);
+// Post.insertMany(posts);
 ```
 
 2. Run development server
